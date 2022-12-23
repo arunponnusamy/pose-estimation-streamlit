@@ -73,7 +73,7 @@ if image is not None:
 
       cv2.line(image_np, (x1, y1), (x2, y2), (0, 255, 0), 2)
   
-  img_rgb = cv2.cvtColor(img_np, cv2.COLOR_BGR2RGB)
+  img_rgb = cv2.cvtColor(image_np, cv2.COLOR_BGR2RGB)
   st.image(img_rgb)
   out = Image.fromarray(img_rgb)
   st.download_button('Download output image', convert_image(out), 'output.png', 'image/png')
